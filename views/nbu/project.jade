@@ -1,0 +1,34 @@
+extends layout
+
+block header
+  include templates/header.jade
+  .header
+    h3.text-muted #{title}     
+  .row
+      block sidebar
+      each portfolioitem, i in portfoliolist
+            a(href='#{portfolioitem.link}') #{portfolioitem.title}
+              .overlay
+                header.hover-title
+                  h2.post-title  #{portfolioitem.title}
+         
+      block content
+      #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+              h4#myModalLabel.modal-title Modal title
+            .modal-body
+              img.img-responsive(data-toggle='modal', data-target='#myModal', src='../img/old_field_1.jpg')
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+      .col-sm-5
+        .post_first(data-toggle='modal', data-target='#myModal')
+          img.img-responsive(src='../img/old_field_1.jpg')
+          img.img-responsive(src='../img/old_field_1.jpg')
+      .col-sm-5
+        img.img-responsive(src='../img/old_field_2.jpg')
+

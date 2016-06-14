@@ -1,0 +1,23 @@
+{
+  "name": "cli-sarahexpress",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery-backstretch": "~2.0.4",
+    "jquery_lazyload": "jquery.lazyload#~1.9.7",
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "~2.1.4",
+    "bootstrap-social": "~4.10.1",
+    "font-awesome": "fontawesome#~4.4.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "scrollup": "~2.4.1"
+  }
+}

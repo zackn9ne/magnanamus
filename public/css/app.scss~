@@ -1,0 +1,116 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.grey { background: #f2f2f2; }
+
+.navbar.navbar-default { background: none; border: none; }
+
+ul {
+   list-style: none;
+-webkit-margin-before: 0;
+-webkit-margin-after: 0;
+-webkit-margin-start: 0;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0;
+}
+
+/* for portfolio page */
+article {
+    height: 250px;
+    }
+.archive article.project a .overlay h2, .home article.project a .overlay h2 {
+    font-size: 1.48688em;
+    font-weight: normal !important;
+    margin-bottom: 0;
+    font-style: italic;
+    text-transform: none;
+    line-height: 1;
+    padding: 1em 0
+}
+
+/* regular hovering http://stackoverflow.com/questions/28941626/darken-image-on-hover */
+.post_first {
+  cursor: pointer;
+  overflow: auto;
+  clear: both;
+/*
+  height: 649px;
+  background: url(../images/old_field_1.jpg) no-repeat center center;
+  background-size: cover;
+  */
+  position: relative;
+}
+.post_first:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  content: "";
+  z-index: 999;
+}
+.post_first:hover:before {
+  cursor: pointer;
+
+  opacity: 1;
+}
+
+.col-sm-5 img.img-responsive:hover { background: rgba(0, 0, 0, 0.4); cursor: pointer; }
+.smservices-popin-column {
+ul li span.ccservices-countries, ul li a
+	{ color: #888888; font-size: 11px; text-transform: uppercase } 
+}
+
+@font-face {
+  font-family: 'Omnes-webfont';
+  src: url('../fonts/omnes-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/omnes-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/omnes-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/omnes-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/omnes-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/omnes-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.container { max-width: none; }
+
+h3 {
+  color: #444444;
+  font-family: 'Omnes-webfont', Fallback, sans-serif;
+  letter-spacing: 4px;
+}
+
+.navbar-header {
+  float: none;
+}
+.navbar-toggle {
+  display: block;
+}
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-nav {
+  margin: 7.5px -15px;
+}
+.navbar-toggle {
+  background: url(../images/all.png) no-repeat;
+  height: 25px;
+  width: 145px;
+  border-radius: 1px;
+}
+#navbar.navbar-collapse.collapse.in { display: block !important; }
+#navbar.navbar-collapse.collapse{ display: none !important; }
+.navbar-nav>li {
+  float: none;
+}
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

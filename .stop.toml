@@ -1,0 +1,6 @@
+source="./app.js"
+destination="./out"
+
+[options]
+minify-js=true
+minify-css=true

@@ -1,0 +1,30 @@
+extends layout
+
+block header
+  include templates/header.jade
+  .header
+  .row
+      block sidebar
+      //include templates/sidebar.jade
+         
+      block content
+      .row
+        br
+        .col-sm-6.align-center
+          h3.post-title First Glance Blue 
+          img.img-responsive(src='../img/product_1.jpg')
+      .row
+        br
+        .col-sm-6.align-center
+          h3.post-title Deep End 
+          img.img-responsive(src='../img/product_2.jpg')
+      .row
+        br
+        .col-sm-6.align-center
+          h3.post-title Mass Appeal 
+          img.img-responsive(src='../img/product_3.jpg')
+        br
+        h3.post-title Inquiries 
+        p sarah@magnessdesign.com 
+          917-239-5136 
+          www.magnessdesign.com

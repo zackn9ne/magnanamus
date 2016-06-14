@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+	h1.
+		Press ID #{press._id}
+	form(action='/press/#{press._id}/edit',method='post',name='updatepress',enctype='application/x-www-form-urlencoded')
+		p Name:
+			input#inputName(type='text', value='#{press.name}', name='name')
+		p Badge:
+			input#inputBadge(type='number', value='#{press.badge}', name='badge')
+		p DOB:
+			input#inputDob(type='date', value='#{press.dob}', name='dob')
+		p Thumbnail:
+			input#inputThumbnail(type='text', value='#{portfolio.thumbnail}', name='thumbnail')
+		p Images:
+			input#inputImages(type='text', value='#{portfolio.images}', name='images')
+		p
+			input(type='hidden',value='PUT',name='_method')
+		p
+			button#btnSubmit(type='submit').
+				Update
