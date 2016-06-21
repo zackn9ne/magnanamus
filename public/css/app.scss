@@ -384,9 +384,12 @@ footer {
     color: #fff;
 }
 section#instagram {
-    max-height: 280px;
+    max-height: 560px;
     overflow: hidden;
-    #instafeed {
+    div {
+      display: inline-block;
+    }
+    #instafeed, #townContainer {
 	a:nth-child(5n+5) {
 /*	    border: 1px solid red;      */
 	    margin-right: 0px;
@@ -404,4 +407,18 @@ section#instagram {
 }
 .btn-instagram {
     background-color: black !important;
+}
+
+.btn-social-icon {
+  margin: 1px;
+}
+
+.contact-hero {
+  max-height: 499px; margin: 0 auto; margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 61.94rem) {
+  .contact-hero {
+  max-height: 499px; margin: 0 auto; margin-bottom: 80px;
+}
 }

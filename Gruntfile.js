@@ -7,6 +7,8 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt, {pattern: 'grunt-contrib-*'});
+
 
   var reloadPort = 35729, files;
 
@@ -93,8 +95,28 @@ module.exports = function (grunt) {
     }, 500);
   });
 
-  grunt.registerTask('default', [
+//logging task
+grunt.registerTask('something', 'Do something interesting.', function(arg) {
+  var msg = 'Doing something...';
+  grunt.verbose.write(msg);
+  try {
+    doSomethingThatThrowsAnExceptionOnError(arg);
+    // Success!
+    grunt.verbose.ok();
+  } catch(e) {
+    // Something went wrong.
+    grunt.verbose.or.write(msg).error().error(e.message);
+    grunt.fail.warn('Something went wrong.');
+  }
+});
+
+
+
+  grunt.registerTask('default', 
+
+[
     'sass',
+//    'something',
     'develop',
     'watch'
   ]);

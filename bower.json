@@ -1,23 +1,37 @@
 {
   "name": "cli-sarahexpress",
-  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "authors": [
+    "zackn9ne <zackn9ne@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zackn9ne/mejn-app-sarah",
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
+    "bower_components",
+    "components/",
+    "test",
+    "tests"
   ],
+  "private": true,
   "dependencies": {
+   // "bootstrap-sass": "~3.3.5",
     "jquery-backstretch": "~2.0.4",
-    "jquery_lazyload": "jquery.lazyload#~1.9.7",
-    "bootstrap-sass": "~3.3.5",
-    "jquery": "~2.1.4",
-    "bootstrap-social": "~4.10.1",
-    "font-awesome": "fontawesome#~4.4.0"
+    "bootstrap": "^3.3.6"
   },
-  "resolutions": {
-    "jquery": "~2.1.4"
+  "install": {
+    "path": {
+      "css": "public/css",
+      "js": "public/js"
+    }
   },
-  "devDependencies": {
-    "scrollup": "~2.4.1"
+  "sources": {
+    "bootstrap": [
+      "bower_components/bootstrap/dist/css/*",
+       "bower_components/bootstrap/dist/js/bootstrap.min.js"
+
+    ]
   }
 }
