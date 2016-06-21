@@ -1,0 +1,14 @@
+extends layout
+
+block header
+  include templates/header.jade
+
+//- list of portfolio items
+
+block content
+    each portfolioitem, i in portfoliolist
+          a(href='#{portfolioitem.link}') #{portfolioitem.title}
+            .overlay
+              header.hover-title
+                h2.post-title  #{portfolioitem.title}
+    p asdf

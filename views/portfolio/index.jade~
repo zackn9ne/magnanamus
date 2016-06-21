@@ -1,0 +1,43 @@
+extends ../layout
+
+block header
+  include ../templates/header.jade
+
+
+
+block content
+  .container
+      - each portfolio, i in portfolios
+          script.
+            $(document).ready(function() {
+              $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}");
+              $("img").lazyload();
+            })
+          article.portfolio(class=(i===4 ? '#{portfolio._id} noclick'  : '#{portfolio._id}'))
+            a(href='/portfolio/#{portfolio._id}') #{portfolio.title}
+                  .overlay
+                      .header.hover-title
+                        h2.post-title #{portfolio.name}
+      div.secret
+        h1 admin panel
+          
+        - each portfolio, i in portfolios
+            article
+                li #{portfolio.name}
+                li Thumbnail: #{portfolio.thumbnail}
+                li #{portfolio.badge}
+                li Images: #{portfolio.images}
+                li #{portfolio.dob}
+                li #{portfolio.description}
+                = portfolio.thumbnail
+                = portfolio._id
+                form(action='/portfolio/#{portfolio._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p 
+                    a(href='/portfolio/#{portfolio._id}/edit') Edit
+                p
+                    a(href='/portfolio/#{portfolio._id}') Show
+                p
+                    a(href='/portfolio/new') New

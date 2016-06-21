@@ -1,0 +1,27 @@
+extends ../layout
+
+script.
+	var inputCounter = 1;
+	function addTexbox(){
+	$("#names").append('<br><input name="names['+ inputCounter++ +']">');
+	}
+
+block content
+	h1 Product ID #{product._id}
+	form(action='/product/#{product._id}/edit',method='post',name='updateproduct',enctype='application/x-www-form-urlencoded')
+		p eName:
+			input#inputName(type='text', value='#{product.name}', name='name')
+		p Badge:
+			input#inputBadge(type='number', value='#{product.badge}', name='badge')
+		p DOB:
+			input#inputDob(type='date', value='#{product.dob}', name='dob')
+		p Thumbnail:
+			input#inputThumbnail(type='text', value='#{product.thumbnail}', name='thumbnail')
+		p#imagesHolder Images:
+			input#inputImages(type='text', value='#{product.images[0]}', name='images')
+			button#addMore(style="margin-left:-220px;" onClick="addtextbox") Add more
+		p
+			input(type='hidden',value='PUT',name='_method')
+		p
+			button#btnSubmit(type='submit').
+				Update

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddPortfolio(name="addportfolio",method="post",action="/portfolio")
+		p Name: 
+			input#inputName(type="text", placeholder="ex. John Smith", name="name")
+		p Badge:
+			input#inputBadge(type="number", placeholder="ex. 123456", name="badge")
+		p Thumbnail: 
+			input#inputThumbnail(type="text", placeholder="ex. John Smith", name="thumbnail")
+		p Images: 
+			input#inputImages(type="text", placeholder="ex. John Smith", name="images")
+		p Description: 
+			input#inputDescription(type="text", placeholder="ex. John Smith", name="description")
+		p
+			button#btnSubmit(type="submit") submit
