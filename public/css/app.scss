@@ -414,11 +414,12 @@ section#instagram {
 }
 
 .contact-hero {
-  max-height: 499px; margin: 0 auto; margin-bottom: 40px;
+  max-height: 499px; margin: 0 auto; margin-bottom: 53px;
 }
 
-@media only screen and (min-width: 61.94rem) {
-  .contact-hero {
-  max-height: 499px; margin: 0 auto; margin-bottom: 80px;
+.social-holder {
+  margin: 3.5em 1em 1em 0; 
+  display: inline-block; 
+  width: 100%;
 }
-}
+

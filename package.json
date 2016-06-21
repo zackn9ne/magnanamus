@@ -23,7 +23,7 @@
     "backstretch": "^1.2.2",
     "bootstrap": "^3.3.5",
     "bson": "^0.4.23",
-    "grunt": "~1.0.1",
+    "grunt": "^1.0.1",
     "grunt-contrib-jade": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "~1.0.0",
