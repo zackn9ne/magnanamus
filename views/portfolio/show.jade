@@ -1,0 +1,68 @@
+extends ../layout
+
+block header
+  include ../templates/header.jade
+block content
+    script.
+      $(document).ready(function() {
+        function loadImages() {
+
+        if(window.devicePixelRatio >= 2) {
+        $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}_2x.jpg");
+        }
+            else {
+        $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}.jpg");
+        }
+        $("img.lazy").lazyload();
+
+        }  
+        loadImages();
+        // Only enable if the document has a long scroll bar
+        // Note the window height + offset
+        if ( ($(window).height() + 100) < $(document).height() ) {
+        $('#top-link-block').removeClass('hidden').affix({
+        // how far to scroll down before link "slides" into view
+        offset: {top:100}
+        });
+        }
+
+        $.scrollUp({
+            scrollName: 'scrollUp',      // Element ID
+            scrollDistance: 300,         // Distance from top/bottom before showing element (px)
+            scrollFrom: 'top',           // 'top' or 'bottom'
+            scrollSpeed: 300,            // Speed back to top (ms)
+            easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+            animation: 'fade',           // Fade, slide, none
+            animationSpeed: 200,         // Animation speed (ms)
+            scrollTrigger: false,        // Set a custom triggering element. Can be an HTML string or jQuery object
+            scrollTarget: false,         // Set a custom target element for scrolling to. Can be element or number
+            scrollText: 'Scroll to top', // Text for element, can contain HTML
+            scrollTitle: false,          // Set a custom <a> title if required.
+            scrollImg: false,            // Set true to use image
+            activeOverlay: false,        // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            zIndex: 2147483647           // Z-Index for the overlay
+        });
+
+          }) //Begin document
+
+    div.portfolio(class='#{portfolio._id}' style='height: 300px;')
+    div.container
+      h2(style='text-align: center;') #{portfolio.name}
+      .col-md-8.portfolio(style="float: none; margin: 0 auto; text-align: center;")
+        //poor form
+        p.opening-paragraph(class='#{portfolio.thumbnail}') #{portfolio.description}
+        each val in portfolio.images
+          div(class='#{val.span}')
+            img(class='lazy' data-original='#{val.path}' style='width: 100%;')
+        div.secret
+          p Images: #{portfolio.images}
+          p Thumbnail: #{portfolio.thumbnail}
+          p DOB: #{portfoliodob}
+          p article #{portfolio.description}
+          p Badge: #{portfolio.badge}
+    a#scrollUp(href='#top', title='Scroll to top', style='position: fixed; z-index: 2147483647; display: none;') Scroll to top
+
+
+          // /top-link-block
+
+

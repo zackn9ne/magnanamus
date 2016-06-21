@@ -1,0 +1,33 @@
+extends ../layout
+
+block header 
+
+  include ../templates/header.jade
+
+  
+block content
+
+  .container
+    .row
+      .col-md-12.no-float
+        h2
+             #{title}
+        - each product, i in products
+          .col-md-4
+            ul.product-holder
+               li 
+                h3 #{product.name}
+               li 
+                 img(src="../img/#{product.thumbnail}" height="250")
+               div.secret
+                 li #{product._id}\
+                 form(action='/product/#{product._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                            input(type='hidden',value='DELETE',name='_method')
+                            button(type='submit').
+                                Delete
+                 p
+                 a(href='/product/#{product._id}/edit') Edit
+                 p
+                 a(href='/product/#{product._id}') Show 
+                 p
+                 a(href='/product/new') new 

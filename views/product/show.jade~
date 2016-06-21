@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    h1.
+        Infophoto #{portfolio._id}
+    p Name: #{portfolio.name}
+    p Badge: #{portfolio.badge}
+    p DOB: #{portfoliodob}
+    p Is Loved: #{portfolio.isloved}

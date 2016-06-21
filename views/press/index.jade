@@ -1,0 +1,37 @@
+extends ../layout
+
+block header 
+
+  include ../templates/header.jade
+
+block content
+
+  .container
+    .row
+      .col-md-2.no-float
+        include ../templates/sidebar.jade
+      .col-md-10.no-float(style="margin-top: 3em;")
+        h2
+             #{title}
+        - each press, i in pressPlural
+            .col-md-5
+              ul.press-holder
+                li
+                  h3 #{press.name}
+                li
+                    img(src="../img/#{press.thumbnail}" height="250")
+                div.secret
+                  li Dob: #{press.dob}
+                  li ID: #{press._id}
+                  li Name: #{press.name}
+                  li Badge: #{press.badge}
+                  form(action='/press/#{press._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                      input(type='hidden',value='DELETE',name='_method')
+                      button(type='submit').
+                          Delete
+                  p
+                  a(href='/press/#{press._id}/edit') Edit
+                  p
+                  a(href='/press/#{press._id}') Show 
+                  p
+                  a(href='/press/new') New 

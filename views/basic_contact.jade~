@@ -1,0 +1,30 @@
+extends layout
+
+block header
+        include templates/header.jade
+block content
+
+  .container(style="max-width: 810px;")
+    .row
+      .col-md-6(style="margin: 4em auto; width: 375px;padding-right: 0px; padding-left: 0px;")
+        .row
+          section#instagram
+            #instafeed
+        .row(style="margin: 1.8em auto; float: left;")
+          a.btn.btn-social-icon.btn-instagram(href="http://instagram.com/magnessdesign" target="_blank")
+            i.fa.fa-instagram
+        .row(style="margin: 1.8em auto; float: left;")
+          a.btn.btn-social-icon.btn-instagram(href="http://instagram.com/magnessdesign" target="_blank")
+            i.fa.fa-instagram
+        .row(style="margin: 1.8em auto; float: left;")
+          a.btn.btn-social-icon.btn-instagram(href="http://instagram.com/magnessdesign" target="_blank")
+            i.fa.fa-instagram
+      .col-md-6(style="color: gray; margin: 4em auto;width: 405px;")
+        img.img-responsive(src='../img/IMG_1715.jpg' style="max-height: 499px; margin: 0 auto; margin-bottom: 20px;")
+        p 116 Franklin Street 
+        p New York, NY 10013
+        p 
+          a(href="mailto:sarah@magnessdesign.com") sarah@magnessdesign.com 
+        p 917-239-5136 
+        p www.magnessdesign.com
+      
