@@ -1,0 +1,20 @@
+{
+	"Email": "",
+	"Registration": {
+		"body": {
+			"resource": "reg",
+			"id": 2317710,
+			"key": {
+				"kty": "EC",
+				"crv": "P-384",
+				"x": "tZbphr3HwQ36xn9XgZEJh2IwIMAtgAe2mEO6OkSSXR1lUaLq_L0OKCbFSsmNF2Wa",
+				"y": "_Rlhy5-vn8c2To7INXIAMbJTU8CUNMkYzmBHVtG3_Nt_N1fKNq7mnCJ17S9aTpni"
+			},
+			"contact": [],
+			"agreement": "https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf"
+		},
+		"uri": "https://acme-v01.api.letsencrypt.org/acme/reg/2317710",
+		"new_authzr_uri": "https://acme-v01.api.letsencrypt.org/acme/new-authz",
+		"terms_of_service": "https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf"
+	}
+}

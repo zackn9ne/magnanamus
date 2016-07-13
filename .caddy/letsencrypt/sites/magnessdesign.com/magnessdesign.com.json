@@ -1,0 +1,6 @@
+{
+	"domain": "magnessdesign.com",
+	"certUrl": "https://acme-v01.api.letsencrypt.org/acme/cert/032961f085bb133c32218094fd8d76d4c0b6",
+	"certStableUrl": "",
+	"accountRef": "https://acme-v01.api.letsencrypt.org/acme/reg/2317710"
+}
