@@ -4,6 +4,10 @@ About
 - This is a Node backend and a MongoDB
 - The webserver is Caddy
 
+Todos
+====
+- Deploy with Jenkins
+
 Deps
 ====
 1. `install npm` - tutorial [here](http://yoember.com/nodejs/the-best-way-to-install-node-js/)
