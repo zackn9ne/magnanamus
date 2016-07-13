@@ -1,6 +1,12 @@
 # mejn-app-sarah
 Mongo Express Jade Node app
 
+What
+====
+- This is the website for Magness Design
+- This is a Node backend and a MongoDB
+- The webserver is Caddy
+
 Deps
 ====
 1. `install npm` - tutorial [here](http://yoember.com/nodejs/the-best-way-to-install-node-js/)
