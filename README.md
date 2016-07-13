@@ -6,7 +6,7 @@ About
 
 Todos
 ====
-- Deploy with Jenkins
+- Deploy with Jenkins _when_ a push is detected
 
 Deps
 ====
