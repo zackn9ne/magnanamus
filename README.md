@@ -1,9 +1,6 @@
-# mejn-app-sarah
-Mongo Express Jade Node app
-
-What
+About
 ====
-- This is the website for Magness Design
+- This is the _production_ website for Magness Design
 - This is a Node backend and a MongoDB
 - The webserver is Caddy
 
