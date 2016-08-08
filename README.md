@@ -7,7 +7,7 @@ About
 Todos
 ====
 - **todo** Deploy with Jenkins _when_ a push is detected
-- Advanced settings in Jenkins Project _configure_ screen to specify '/tmp/jenkins_test' path in which to clone
+- **todo** Advanced settings in Jenkins Project _configure_ screen to specify '/tmp/jenkins_test' path in which to clone
 
 Deps
 ====
