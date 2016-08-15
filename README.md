@@ -10,7 +10,9 @@ How to Run
 2. `bower install`
 2. `mongod`
 3. `npm install`
-4. `gulp`
+4. `sudo gem install sass`
+5. `gulp`
+6. curl `localhost:3000`
 
 Todos
 ====
