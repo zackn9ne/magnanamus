@@ -5,7 +5,8 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   res.render('index', { title: 'Magness Design' });
-  res.sendFile('../index.html', { title: 'Magness Design' });
+  // res.sendFile('../index.html', { title: 'Magness Design' });
+
 });
 
 router.get('/about', function(req, res) {
@@ -14,6 +15,7 @@ router.get('/about', function(req, res) {
 
 router.get('/contact', function(req, res) {
   res.render('basic_contact', { title: 'Contact' });
+ 
 });
 
 

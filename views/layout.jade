@@ -7,16 +7,23 @@ html(lang='en')
     block css
       link(rel='stylesheet', href='/css/style.css')
       link(rel='stylesheet', href='/css/app.css')
-      link(rel='stylesheet', href='../components/bootstrap-social/bootstrap-social.css')
+      //- bootstrap is getting called via app.css
       link(rel='stylesheet', href='../components/font-awesome/css/font-awesome.min.css')
     block js
-        script(src='../components/jquery/dist/jquery.js')
-        script(src='../components/jquery.lazyload/jquery.lazyload.js')
-        script(src='../components/jquery.lazyload/jquery.scrollstop.js')
-        script(src='../components/jquery-backstretch/jquery.backstretch.min.js')
-        script(src='../components/scrollup/dist/jquery.scrollUp.min.js')
-        script(src='../js/instafeed.js')         
-        script(src='../js/instafeed_runner.js')         
+        script(src='/components/jquery/dist/jquery.js')
+
+        script(src='/components/vanilla-lazyload/dist/vanilla-lazyload.js')
+
+        script(src='/components/bootstrap/dist/js/bootstrap.js')
+
+        script(src='/components/jquery-scrollstop/jquery.scrollstop.js')
+
+        script(src='/components/jquery-backstretch/jquery.backstretch.min.js')
+
+        script(src='/components/scrollup/dist/jquery.scrollUp.min.js')
+
+
+
 
       if ENV_DEVELOPMENT
         script(src='http://localhost:35729/livereload.js')
@@ -32,18 +39,7 @@ html(lang='en')
     // endbower
     // endbuild
     // build:js(.) scripts/plugins.js
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
-    script(src='../components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+
 
     // endbuild
     // build:js scripts/main.js

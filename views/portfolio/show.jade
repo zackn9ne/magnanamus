@@ -4,19 +4,19 @@ block header
   include ../templates/header.jade
 block content
     script.
-      $(document).ready(function() {
-        function loadImages() {
+      $(function() {
 
-        if(window.devicePixelRatio >= 2) {
-        $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}_2x.jpg");
-        }
-            else {
-        $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}.jpg");
-        }
-        $("img.lazy").lazyload();
+        function loadHeroBackstretchIt() {
 
-        }  
-        loadImages();
+          if(window.devicePixelRatio >= 2) {
+            $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}_2x.jpg");
+
+          } else {
+            $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}.jpg");
+          }
+        }
+        loadHeroBackstretchIt();
+
         // Only enable if the document has a long scroll bar
         // Note the window height + offset
         if ( ($(window).height() + 100) < $(document).height() ) {
@@ -43,13 +43,16 @@ block content
             zIndex: 2147483647           // Z-Index for the overlay
         });
 
-          }) //Begin document
+        // instantiate vanilla-lazyload
+        var myLazyLoad = new LazyLoad();
+
+
+      }) //Begin document
 
     div.portfolio(class='#{portfolio._id}' style='height: 300px;')
     div.container
       h2(style='text-align: center;') #{portfolio.name}
       .col-md-8.portfolio(style="float: none; margin: 0 auto; text-align: center;")
-        //poor form
         p.opening-paragraph(class='#{portfolio.thumbnail}') #{portfolio.description}
         each val in portfolio.images
           div(class='#{val.span}')
@@ -61,8 +64,3 @@ block content
           p article #{portfolio.description}
           p Badge: #{portfolio.badge}
     a#scrollUp(href='#top', title='Scroll to top', style='position: fixed; z-index: 2147483647; display: none;') Scroll to top
-
-
-          // /top-link-block
-
-
