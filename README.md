@@ -4,6 +4,16 @@ About
 - This is a Node backend and a MongoDB
 - The webserver is Caddy
 
+How to Run
+===
+1. `git clone THISREPO`
+2. `bower install`
+2. `mongod`
+3. `npm install`
+4. `sudo gem install sass`
+5. `gulp`
+6. curl `localhost:3000`
+
 Todos
 ====
 - **todo** Deploy with Jenkins _when_ a push is detected
