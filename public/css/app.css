@@ -1,7 +1,8 @@
 /* bower:scss */
-@import url(../components/bootstrap/dist/css/bootstrap.min.css);
+/*@import url(../components/bootstrap/dist/css/bootstrap.min.css);*/
 /* endbower */
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
+/*@import url(https://fonts.googleapis.com/css?family=Cinzel);
+*/
 html, body, .container {
   height: inherit !important; }
 

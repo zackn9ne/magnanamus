@@ -14,12 +14,12 @@ block content
 
                   if(window.devicePixelRatio >= 2) {
               $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}_2x.jpg");
-              $("img").lazyload();
+              $("img");
 
                   }
                   else {
               $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}.jpg");
-          
+
                   }
 
 
@@ -27,7 +27,7 @@ block content
 
               }
               loadHeroBackstretchIt();
-            
+
             })
           article.portfolio(class=(i===4 ? '#{portfolio._id} noclick'  : '#{portfolio._id}'))
             a(href='/portfolio/#{portfolio._id}') #{portfolio.title}

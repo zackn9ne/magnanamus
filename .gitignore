@@ -2,6 +2,7 @@ dump
 .DS_Store
 dump*
 node_modules
+build/*.js
 public/components
 .sass-cache
 public/js/instafeed_runner.js

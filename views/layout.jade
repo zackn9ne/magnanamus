@@ -5,22 +5,14 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     title= title
     block css
-      link(rel='stylesheet', href='/css/style.css')
-      link(rel='stylesheet', href='/css/app.css')
-      //- bootstrap is getting called via app.css
-      link(rel='stylesheet', href='../components/font-awesome/css/font-awesome.min.css')
+      link(href='https://fonts.googleapis.com/css?family=Cinzel', rel='stylesheet')
+      //- link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+      //- link(rel='stylesheet', href='/components/font-awesome/css/font-awesome.min.css')
+      link(rel='stylesheet', href='/build/all_the.css')
+
     block js
-        script(src='/components/jquery/dist/jquery.js')
+        script(src='/build/bower_concat.min.js')
 
-        script(src='/components/vanilla-lazyload/dist/vanilla-lazyload.js')
-
-        script(src='/components/bootstrap/dist/js/bootstrap.js')
-
-        script(src='/components/jquery-scrollstop/jquery.scrollstop.js')
-
-        script(src='/components/jquery-backstretch/jquery.backstretch.min.js')
-
-        script(src='/components/scrollup/dist/jquery.scrollUp.min.js')
 
 
 
