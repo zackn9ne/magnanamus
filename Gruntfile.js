@@ -25,6 +25,7 @@ module.exports = function(grunt) {
             my_target: {
               files: {
                 'public/build/bower_concat.min.js':
+                // my awesome dependancy system
                 [
                   bowerPath+'jquery/dist/jquery.js',
                   bowerPath+'bootstrap/dist/js/bootstrap.js',
@@ -42,16 +43,16 @@ module.exports = function(grunt) {
 
         cssmin: {
           options: {
-            banner: '/ My minified css file /',
             keepSpecialComments: 0,
             advanced: false
           },
             target: {
               files: {
                 "public/build/all_the.css": [
-                "public/components/font-awesome/css/font-awesome.css",
-                "public/components/bootstrap/dist/css/bootstrap.css",
-                "public/css/app.css"
+                // my awesome dependancy system
+                    "public/components/font-awesome/css/font-awesome.css",
+                    "public/components/bootstrap/dist/css/bootstrap.css",
+                    "public/css/app.css"
                 ]
               }
             }
@@ -63,14 +64,15 @@ module.exports = function(grunt) {
                 file: 'bin/www'
             }
         },
+
         sass: {
             dist: {
                 files: {
-                    'public/css/style.css': 'public/css/style.scss',
                     'public/css/app.css': 'public/css/app.scss'
                 }
             }
         },
+
         watch: {
             options: {
                 nospawn: true,
