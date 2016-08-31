@@ -1,4 +1,5 @@
 $icon-font-path: "../components/bootstrap/fonts";
+$hero-color: #fffef2;
 
 /* bower:scss */
 @import "../components/bootstrap/dist/css/bootstrap.min.css";
@@ -8,13 +9,13 @@ html, body, .container {
     height: inherit !important;
 }
 
-body { 
+body {
   &.xgrey {
     background: #eeeeee;
   }
-  padding: 50px 0 0 0; 
-  margin-top: 10em; 
-  color: #888888; 
+  padding: 50px 0 0 0;
+  margin-top: 10em;
+  color: #888888;
   font-size: 11px;
   font-family: 'Cinzel', Fallback, sans-serif, Times;
   /* for in developement properties */
@@ -47,7 +48,11 @@ body {
 // main { margin: 150px 0 0 0; }
 
 
-.navbar.navbar-default { background: none; border: none; }
+.navbar.navbar-default {
+  background: none;
+  border: none;
+  margin-top: -5em;
+}
 
 ul {
    list-style: none;
@@ -167,7 +172,7 @@ article {
 .col-sm-5 img.img-responsive:hover { background: rgba(0, 0, 0, 0.4); cursor: pointer; }
 .smservices-popin-column {
 ul li span.ccservices-countries, ul li a, .nav > li > a,
-	{ color: #888888; font-size: 11px !important; text-transform: uppercase } 
+	{ color: #888888; font-size: 11px !important; text-transform: uppercase }
 }
 
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
@@ -186,7 +191,76 @@ h2 {
   url('../fonts/omnes-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-.container { max-width: none; }
+.container {
+   max-width: none;
+&.follower {
+    padding-top: 5rem;
+  }
+}
+
+.heroBox {
+    border: .5rem solid $hero-color;
+    color: $hero-color;
+    text-align: center;
+    padding: 3.75rem;
+    width: 530px;
+    margin: 0 auto;
+}
+.separator-container .separator.line-separator:before {
+    float: left;
+}
+.separator-container .separator.line-separator:after {
+    float: right;
+}
+.separator-container .separator.line-separator:before, .separator-container .separator.line-separator:after {
+    display: block;
+    width: 40%;
+    content: " ";
+    margin-top: 14px;
+    border: 1px solid #c5a47e;
+}
+.separator-container {
+  -webkit-transition: all 0.7s ease-out 0.5s;
+  -moz-transition: all 0.7s ease-out 0.5s;
+  -o-transition: all 0.7s ease-out 0.5s;
+  -ms-transition: all 0.7s ease-out 0.5s;
+  transition: all 0.7s ease-out 0.5s;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+    font-size: 140%;
+    text-align: center;
+    position: relative;
+.separator {
+    color: #c5a47e;
+    margin: 0 auto 1em;
+    width: 11em;
+  }
+}
+
+.quotes:before {
+    content: "\201C";
+    left: 0;
+}
+.quotes:after {
+    content: "\201D";
+    right: 0;
+}
+.quotes:before, .quotes:after {
+  position: absolute;
+      font-size: 50px;
+      font-family: sans-serif;
+      color: #777;
+      line-height: 1;
+}
+
+h2.title {
+      max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+
 
 h3 {
   color: #444444;
@@ -202,9 +276,9 @@ button.navbar-toggle {
 
     display: block;
         &:after {
-        content: ""; 
+        content: "";
         background: url('../../img/up_down.png');
-        background-position: 0px -20px; 
+        background-position: 0px -20px;
         margin-left: 5px;
         display: inline-block;
         zoom: 1;
@@ -216,7 +290,7 @@ button.navbar-toggle {
             span {
                 display: block;
                 &:after {
-                    background-position: 0px 0px; 
+                    background-position: 0px 0px;
                 }
     }
     }
@@ -355,9 +429,9 @@ footer {
 }
 #top-link-block {
     &:after{
-	content: "back to top"; 
+	content: "back to top";
 	background: url('../../img/up_down.png') no-repeat;
-	background-position: right -20px; 
+	background-position: right -20px;
 	display: inline-block;
 	zoom: 1;
 	width: 100%;
@@ -416,8 +490,8 @@ section#instagram {
 }
 
 .social-holder {
-  margin: 3.5em 1em 1em 0; 
-  display: inline-block; 
+  margin: 3.5em 1em 1em 0;
+  display: inline-block;
   width: 100%;
 }
 
