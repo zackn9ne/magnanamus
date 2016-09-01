@@ -98,7 +98,7 @@ module.exports = function(grunt) {
                     'public/css/*.scss'
                 ],
                 // tasks: ['sass'],
-                tasks: ['sass', 'cssmin'],
+                tasks: ['sass', 'cssmin'], // run SASS compiler, then minify it to [your concatiated&minified]css.css
                 options: {
                     livereload: reloadPort
                 }

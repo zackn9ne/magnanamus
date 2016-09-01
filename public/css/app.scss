@@ -1,5 +1,6 @@
 $icon-font-path: "../components/bootstrap/fonts";
-$hero-color: #fffef2;
+$hero-color: #eee;
+$brand-font: 'Cinzel', serif, Fallback, sans-serif;
 
 /* bower:scss */
 @import "../components/bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +14,6 @@ body {
   &.xgrey {
     background: #eeeeee;
   }
-  padding: 50px 0 0 0;
   margin-top: 10em;
   color: #888888;
   font-size: 11px;
@@ -51,7 +51,6 @@ body {
 .navbar.navbar-default {
   background: none;
   border: none;
-  margin-top: -5em;
 }
 
 ul {
@@ -81,6 +80,11 @@ header {
 /* for portfolio page */
 article {
     height: 350px;
+    p.videoCaption {
+      margin: 1em 0 0 0;
+      font-size: 1.4em;
+      text-align: center;
+    }
     a {
       display: block;
       position: relative;
@@ -255,11 +259,34 @@ h2 {
 
 h2.title {
       max-width: 760px;
-    margin: 0 auto;
+    margin: .8em auto 0 auto;
     text-align: center;
     display: block;
 }
 
+.btn-primary_styles {
+  border-radius: 0px;
+  font-family: $brand-font;
+  border-width: 2px;
+  padding: .75rem 1.125rem .625rem;
+      text-decoration: none;
+  color: #282829;
+  background-color: rgba(40,40,41,0);
+  border-color: #282829;
+  box-shadow: 0 0 0 rgba(40,40,41,0);
+  display: inline-block;
+      margin: 0;
+      cursor: pointer;
+      border-style: solid;
+      text-decoration: none;
+      text-align: center;
+      transition: border-color .15s cubic-bezier(.694,.0482,.335,1),background-color .15s cubic-bezier(.694,.0482,.335,1),color .15s cubic-bezier(.694,.0482,.335,1),box-shadow .15s cubic-bezier(.694,.0482,.335,1);
+      &:hover {
+    border-color: #282829;
+    background-color: #282829;
+    color: #fffef2;
+}
+}
 
 
 h3 {
@@ -295,7 +322,33 @@ button.navbar-toggle {
     }
     }
 }
+.navbarLogo {
+  width: 70%;
+      margin: 0 auto;
+      position: relative;
+  & a {
+        display: block;                          // Display block so that we can set width, height and other attributes.
+        width: 100px;
+        margin: auto;                  // Set the required width (Should be half the graphic width to be retina ready)
+        height: 50px;                            // Set the required height (Should be half the graphic height to be retina ready)
+        text-indent: -9999px;                    // Push the text off screen so that it doesn't overlap/duplicate over the logo graphic
+        background-image: url(../img/logo2x.png);  // Set the logo graphich as the background image
+        background-size: cover;                  // Make sure that the logo graphic covers the dimensions of the site-title (Must for retina ready)
+  }
+}
+nav {
+  .container-fluid {
+      .navbar-header {
+        margin: 0;
+      }
+    }
+}
 .navbar {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  width: 100%;
+  background: white !important;
     font-family: Cinzel, serif;
     min-height: 0px;
     margin-bottom: 0px;
@@ -410,7 +463,9 @@ html,body,.container
 
 footer {
   clear: both;
-  display: none;
+      padding: 4em 7.5% 0;
+      font-size: 1em;
+      text-align: center;
 }
 
 /* tricks */
