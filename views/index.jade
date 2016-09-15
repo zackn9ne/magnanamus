@@ -6,4 +6,40 @@ block header
 //- running Backstretch
 
 block content
-	script(src='../js/homepage_slideshow.js')
+	.container.hero
+		.heroBox
+			h1.heroCopy__hero__37Lvf.topBar
+				| Now Playing
+				br
+				| The Townhouse
+			.heroSubtext__hero__3JonU
+				span Silver Lining Interiors | Magness Design | Build Pictures
+
+	.container.follower
+		.row
+			article.col-sm-6
+				style.
+					.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+				.embed-container
+					iframe(src='http://player.vimeo.com/video/173256332', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+						p
+							a(href='https://vimeo.com/173256332') Townhouse
+							|  from
+							a(href='https://vimeo.com/buildpictures') Build Pictures
+							|  on
+							a(href='https://vimeo.com') Vimeo
+							| .
+				p.videoCaption The Townhouse captures the vision and collaborative efforts of Architect, Builder, Client and Designer.
+			article.col-sm-6
+				h2.title What People Are Saying...
+				.separator-container
+					.separator.line-separator
+					| ∎
+					div.col-sm-offset-1.col-sm-10
+						h3.quotes An Elegant New York Townhouse Is Reborn Designer Sarah Magness spearheads an extensive home renovation for the ages
+						p Architectural Digest
+						button.btn.btn-primary_styles Visit The Property
+
+block footer
+	p ©2016 Magness Design. All Rights Reserved

@@ -33,7 +33,8 @@ module.exports = function(grunt) {
                   bowerPath+'jquery-scrollstop/jquery.scrollstop.js',
                   bowerPath+'jquery-backstretch/jquery.backstretch.js',
                   bowerPath+'scrollup/dist/jquery.scrollUp.js',
-                  bowerPath+'instafeed.js/instafeed.js'
+                  bowerPath+'instafeed.js/instafeed.js',
+                  'public/js/'+'home_hero.js'
                 ]
               }
             }
@@ -73,7 +74,7 @@ module.exports = function(grunt) {
             }
         },
 
-        watch: {
+        watch: {  //grunt-contrib-watch ^O.O^
             options: {
                 nospawn: true,
                 livereload: reloadPort
@@ -96,7 +97,8 @@ module.exports = function(grunt) {
                 files: [
                     'public/css/*.scss'
                 ],
-                tasks: ['sass'],
+                // tasks: ['sass'],
+                tasks: ['sass', 'cssmin'], // run SASS compiler, then minify it to [your concatiated&minified]css.css
                 options: {
                     livereload: reloadPort
                 }
