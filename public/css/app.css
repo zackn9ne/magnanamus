@@ -58,6 +58,13 @@ header {
     /* Safari */
     transform: scale(0.7, 0.7); }
 
+/* for homepage */
+article.promo {
+  height: 420px; }
+
+@media (max-width: 768px) {
+  article.promo {
+    display: none; } }
 /* for portfolio page */
 article {
   height: 350px; }
@@ -205,6 +212,9 @@ h2 {
     margin: 0 auto 1em;
     width: 11em; }
 
+article p {
+  font-family: Cinzel, serif; }
+
 .quotes:before {
   content: "\201C";
   left: 0; }
@@ -237,16 +247,19 @@ h2.title {
   border-color: #282829;
   box-shadow: 0 0 0 rgba(40, 40, 41, 0);
   display: inline-block;
-  margin: 0;
+  margin: 100px 0 0 0;
   cursor: pointer;
   border-style: solid;
   text-decoration: none;
   text-align: center;
   transition: border-color 0.15s cubic-bezier(0.694, 0.0482, 0.335, 1), background-color 0.15s cubic-bezier(0.694, 0.0482, 0.335, 1), color 0.15s cubic-bezier(0.694, 0.0482, 0.335, 1), box-shadow 0.15s cubic-bezier(0.694, 0.0482, 0.335, 1); }
-  .btn-primary_styles:hover {
+  .btn-primary_styles:hover, .btn-primary_styles:focus {
     border-color: #282829;
     background-color: #282829;
-    color: #fffef2; }
+    text-decoration: none;
+    color: #fffef2 !important; }
+  .btn-primary_styles:visited {
+    color: #282829; }
 
 h3 {
   color: #444444;
@@ -387,8 +400,10 @@ html, body, .container {
 footer {
   clear: both;
   padding: 4em 7.5% 0;
-  font-size: 1em;
   text-align: center; }
+  footer p {
+    font-family: Cinzel, serif;
+    font-size: .6em; }
 
 /* tricks */
 .navbar-fixed-top + .content-container {
@@ -461,5 +476,31 @@ section#instagram {
   margin: 3.5em 1em 1em 0;
   display: inline-block;
   width: 100%; }
+
+@media (max-width: 1190px) {
+  iframe, article.col-md-6 {
+    margin: 0 auto;
+    display: block;
+    float: none; } }
+img.mobilisima {
+  max-width: 400px;
+  margin: 50px auto 0 auto; }
+
+@media (max-width: 768px) {
+  nav #navbar {
+    padding-top: 35px; }
+  nav.navbar-default {
+    top: 0; }
+  nav button.navbar-toggle {
+    width: 55px; }
+    nav button.navbar-toggle span {
+      display: none !important; }
+    nav button.navbar-toggle:after {
+      content: 'menu'; }
+
+  .heroBox {
+    width: 100%; }
+    .heroBox .h1, .heroBox h1 {
+      font-size: 2.5rem; } }
 
 /*# sourceMappingURL=app.css.map */

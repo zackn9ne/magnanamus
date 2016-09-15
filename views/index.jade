@@ -17,11 +17,8 @@ block content
 
 	.container.follower
 		.row
-			article.col-sm-6
-				style.
-					.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-				.embed-container
-					iframe(src='http://player.vimeo.com/video/173256332', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+			article.col-md-12.col-lg-6.promo
+				iframe(src='https://player.vimeo.com/video/173256332?color=e3a41b&title=0&byline=0&portrait=0', width='640', height='360', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
 						p
 							a(href='https://vimeo.com/173256332') Townhouse
@@ -31,7 +28,7 @@ block content
 							a(href='https://vimeo.com') Vimeo
 							| .
 				p.videoCaption The Townhouse captures the vision and collaborative efforts of Architect, Builder, Client and Designer.
-			article.col-sm-6
+			article.col-md-6
 				h2.title What People Are Saying...
 				.separator-container
 					.separator.line-separator
@@ -39,7 +36,10 @@ block content
 					div.col-sm-offset-1.col-sm-10
 						h3.quotes An Elegant New York Townhouse Is Reborn Designer Sarah Magness spearheads an extensive home renovation for the ages
 						p Architectural Digest
-						button.btn.btn-primary_styles Visit The Property
 
-block footer
-	p ©2016 Magness Design. All Rights Reserved
+						img.mobilisima.visible-xs(src='../img/scr_grab_autogen.webp')
+
+						a.btn-primary_styles(href='https://vimeo.com/173256332', target='_blank') Visit The Property
+
+						include templates/footer.jade
+
