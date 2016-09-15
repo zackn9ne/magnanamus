@@ -483,7 +483,7 @@ section#instagram {
     display: block;
     float: none; } }
 img.mobilisima {
-  max-width: 400px;
+  max-width: 320px;
   margin: 50px auto 0 auto; }
 
 @media (max-width: 768px) {
