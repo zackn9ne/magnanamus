@@ -77,9 +77,14 @@ article.promo {
 @media (min-width: 735px) {
   iframe {
     margin: 0 auto;
+    display: block;
     float: none;
     width: 40em;
     height: 25em; } }
+/* fix article div height for homepage */
+.container.hero article, .container.follower article {
+  height: initial; }
+
 /* for portfolio page */
 article {
   height: 350px; }
@@ -261,8 +266,10 @@ h2.title {
   background-color: rgba(40, 40, 41, 0);
   border-color: #282829;
   box-shadow: 0 0 0 rgba(40, 40, 41, 0);
-  display: inline-block;
-  margin: 100px 0 0 0;
+  display: block;
+  float: left;
+  margin: 100px auto 0 auto;
+  width: 100%;
   cursor: pointer;
   border-style: solid;
   text-decoration: none;
@@ -417,8 +424,7 @@ footer {
   padding: 4em 7.5% 0;
   text-align: center; }
   footer p {
-    font-family: Cinzel, serif;
-    font-size: .6em; }
+    font-family: Cinzel, serif; }
 
 /* tricks */
 .navbar-fixed-top + .content-container {
@@ -492,7 +498,7 @@ section#instagram {
   display: inline-block;
   width: 100%; }
 
-@media (max-width: 1190px) {
+@media (max-width: 1199px) {
   iframe, article.col-md-6 {
     margin: 0 auto;
     display: block;
