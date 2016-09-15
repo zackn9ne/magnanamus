@@ -80,16 +80,38 @@ header {
 /* for homepage */
 article {
       &.promo {
-      	   height: 420px;
+      	      display: block;
+      
         }
       }
-@media (max-width: 768px) {
-article {
-   &.promo {
-      display: none;
-   }
+@media (max-width: 400px) {
+iframe {
+ margin: 0 auto;
+ float: none;
+    width: 22em;
+    height: 12em;
+
+ }
 }
+@media (min-width: 401px) {
+iframe {
+ margin: 0 auto;
+ float: none;
+    width: 33em;
+    height: 19em;
+
+ }
 }
+@media (min-width: 735px) {
+iframe {
+ margin: 0 auto;
+ float: none;
+    width: 40em;
+    height: 25em;
+
+ }
+}
+
 
 /* for portfolio page */
 article {
