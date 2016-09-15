@@ -77,6 +77,20 @@ header {
   }
 }
 
+/* for homepage */
+article {
+      &.promo {
+      	   height: 420px;
+        }
+      }
+@media (max-width: 768px) {
+article {
+   &.promo {
+      display: none;
+   }
+}
+}
+
 /* for portfolio page */
 article {
     height: 350px;
@@ -241,6 +255,12 @@ h2 {
   }
 }
 
+article {
+p {
+    font-family: Cinzel, serif;
+    }
+    }
+
 .quotes:before {
     content: "\201C";
     left: 0;
@@ -275,16 +295,20 @@ h2.title {
   border-color: #282829;
   box-shadow: 0 0 0 rgba(40,40,41,0);
   display: inline-block;
-      margin: 0;
+      margin: 100px 0 0 0;
       cursor: pointer;
       border-style: solid;
       text-decoration: none;
       text-align: center;
       transition: border-color .15s cubic-bezier(.694,.0482,.335,1),background-color .15s cubic-bezier(.694,.0482,.335,1),color .15s cubic-bezier(.694,.0482,.335,1),box-shadow .15s cubic-bezier(.694,.0482,.335,1);
-      &:hover {
+      &:hover, &:focus {
     border-color: #282829;
     background-color: #282829;
-    color: #fffef2;
+    text-decoration: none;
+    color: #fffef2 !important;
+}
+&:visited {
+  color: #282829;
 }
 }
 
@@ -464,8 +488,12 @@ html,body,.container
 footer {
   clear: both;
       padding: 4em 7.5% 0;
-      font-size: 1em;
+
       text-align: center;
+p {
+          font-family: Cinzel, serif;
+font-size: .6em;
+      }
 }
 
 /* tricks */
@@ -550,3 +578,51 @@ section#instagram {
   width: 100%;
 }
 
+@media (max-width: 1190px) {
+iframe, article.col-md-6 {
+ margin: 0 auto;
+ display: block;
+ float: none;
+ }
+}
+
+img {
+&.mobilisima {
+  max-width: 400px;
+  margin: 50px auto 0 auto;
+  }
+  }
+
+@media (max-width: 768px) {
+nav {
+#navbar {
+padding-top: 35px;
+}
+  &.navbar-default {
+      top: 0;
+   }
+  button {
+   &.navbar-toggle {
+     width: 55px;
+       span {
+          display: none !important;
+	  }
+    &:after {
+      content: 'menu';
+      }
+  }
+  }
+
+}
+
+ 
+.heroBox {
+
+	 width: 100%;
+
+   .h1, h1 {
+    font-size: 2.5rem;
+    }
+  }
+
+}
