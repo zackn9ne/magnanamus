@@ -89,9 +89,10 @@ article.promo {
 article {
   height: 350px; }
   article p.videoCaption {
-    margin: 1em 0 0 0;
+    margin: 1em auto 5em auto;
     font-size: 1.4em;
-    text-align: center; }
+    text-align: center;
+    max-width: 455px; }
   article a {
     display: block;
     position: relative;
@@ -386,7 +387,8 @@ html, body, .container {
   box-sizing: border-box; }
   .container.noPad {
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-top: 0; }
   .container .col-md-8.portfolio div {
     margin-bottom: 1em; }
   .container ul.product-holder, .container ul.press-holder {
