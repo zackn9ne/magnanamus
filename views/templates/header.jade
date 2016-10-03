@@ -1,19 +1,16 @@
-header.container-fluid.grey.text-center
-  nav.navbar.navbar-default
-    .container-fluid
-       div(class="navbar-header #{title}")
-         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-           span INFORMATION
-       #navbar.navbar-collapse.collapse
-         ul.nav.navbar-nav
-           li.active
-             a(href='/') Home
-           li
-             a(href='/portfolio') Portfolio
-           li
-             a(href='/about') About
-           li
-             a(href='/contact') Contact
-  .navbarLogo
-    a(href="http://magnessdesign.com") Magness Design
-    h2 #{title}
+header
+  nav
+    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+    #navbar.navbar-collapse.collapse.fade-in.one
+       ul.nav.navbar-nav
+         li.active
+           a(href='/') Home
+         li
+           a(href='/portfolio') Portfolio
+         li
+           a(href='/about') About
+         li
+           a(href='/contact') Contact
+    .navbarLogo
+      a(href="http://magnessdesign.com") Magness Design
+      h2 #{title}

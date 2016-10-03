@@ -11,19 +11,12 @@ html, body, .container {
 }
 
 body {
-  &.xgrey {
-    background: #eeeeee;
-  }
-  margin-top: 8.75em;
+  background: #eeeeee;
+  margin-top: 6em;
   color: #888888;
   //font-size: 11px;
   font-family: 'Cinzel', Fallback, sans-serif, Times;
-  /* for in developement properties */
-  /* todo tweek homepage only backstretch
-  .backstretch {
-      top: 100px !important;
-  }
-*/
+
   a {
     color: black;
     &:hover {
@@ -43,15 +36,8 @@ body {
   .clearfix {
     clear: both;
   }
-}
-
-// main { margin: 150px 0 0 0; }
 
 
-.navbar.navbar-default {
-  background: none;
-  border: none;
-}
 
 ul {
   list-style: none;
@@ -64,607 +50,656 @@ ul {
 
 header {
   background-color: #fff;
-  padding: 1em 7.5%;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 100;
-  img {
-    -ms-transform: scale(0.7,0.7); /* IE 9 */
-    -webkit-transform: scale(0.7,0.7); /* Safari */
-    transform: scale(0.7,0.7);
-  }
-}
 
-/* for homepage */
-article {
-  &.promo {
-    display: block;
+  nav {
 
-  }
-}
-@media (max-width: 400px) {
-  iframe {
-    margin: 0 auto;
-    float: none;
-    width: 22em;
-    height: 12em;
-
-  }
-}
-@media (min-width: 401px) {
-  iframe {
-    margin: 0 auto;
-    float: none;
-    width: 33em;
-    height: 19em;
-
-  }
-}
-@media (min-width: 735px) {
-  iframe {
-    margin: 0 auto;
-    display: block;
-    float: none;
-    width: 40em;
-    height: 25em;
-
-  }
-}
+    button.navbar-toggle {
+      font-size: 11px;
+      z-index: 100;
+      position: fixed;
+      margin-left: 1.3em;
+            border-radius: 1px;
+      border: 1px solid $hero-color;
 
 
-/* fix article div height for homepage */
-.container.hero, .container.follower {
-  article {
-    height: initial;
-  }
-}
-/* for portfolio page */
-article {
-  height: 350px;
-  p.videoCaption {
-    margin: 1em auto 1em auto;
-    font-size: 1.4em;
-    text-align: center;
-    max-width: 455px;
-  }
-  a {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0 0 0 0;
-    &:hover {
-      color:#2e3138;
-      .overlay {
-        opacity:1;
+      &:after {
+        content: 'menu';
       }
     }
-    .overlay {
-      background-color: rgba(0,0,0,0.4);
+    &.collapsed {
+      span {
+        display: block;
+        &:after {
+          background-position: 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+  nav {
+    .container-fluid {
+      .navbar-header {
+        margin: 0;
+      }
+    }
+
+    /* make keyframes that tell the start state and the end state of our object */
+
+    @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+    @-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+    .fade-in {
+      opacity:0;  /* make things invisible upon start */
+      -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation:fadeIn ease-in 1;
+      animation:fadeIn ease-in 1;
+
+      -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+
+      -webkit-animation-duration:1s;
+      -moz-animation-duration:1s;
+      animation-duration:1s;
+    }
+
+    .fade-in.one {
+      -webkit-animation-delay: 0.7s;
+      -moz-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+    }
+
+    #navbar { /*  the hidden one  */
+      font-size: 11px;
       position: absolute;
       left: 0;
-      top: 0;
-      display: table;
       width: 100%;
-      height: 100%;
-      z-index: 5;
-      text-align: center;
-      opacity: 0;
-      .header.hover-title {
-        background: none;
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
+      background: white !important;
+      font-family: Cinzel, serif;
+      -webkit-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
+
+      .nav.navbar-nav {
+        margin: 0 !important;
         width: 100%;
-        position: relative;
-        h2 {
-          color: #fff;
-          padding: 0 0;
-          font-weight: normal !important;
-          /*              font-family: 'Omnes-webfont', Fallback, sans-serif !important; */
-          font-family: 'Cinzel', Fallback, sans-serif, Times;
-          margin-bottom: 0;
-          text-transform: uppercase;
-          line-height: 1;
-          font-size: 1.5em;
-          font-variant: normal;
-          font-weight: normal;
+
+        ul {
+          width: 100%;
+        }
+        li {
+          float: none;
+          margin-bottom: 19px;
         }
       }
-    }
-  }
 
-}
-.archive article.project a .overlay h2, .home article.project a .overlay h2 {
-  font-size: 1.48688em;
-  font-weight: normal !important;
-  margin-bottom: 0;
-  font-style: italic;
-  text-transform: none;
-  line-height: 1;
-  padding: 1em 0
-}
+      &.navbar-collapse.collapse { display: none !important;
 
-/* regular hovering http://stackoverflow.com/questions/28941626/darken-image-on-hover */
-.post_first {
-  cursor: pointer;
-  overflow: auto;
-  clear: both;
-  /*
-    height: 649px;
-    background: url(../images/old_field_1.jpg) no-repeat center center;
-    background-size: cover;
-    */
-  position: relative;
-}
-.post_first:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  background: rgba(0, 0, 0, .5);
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
-  content: "";
-  z-index: 999;
-}
-.post_first:hover:before {
-  cursor: pointer;
-  opacity: 1;
-}
-
-.col-sm-5 img.img-responsive:hover { background: rgba(0, 0, 0, 0.4); cursor: pointer; }
-.smservices-popin-column {
-  ul li span.ccservices-countries, ul li a, .nav > li > a,
-  { color: #888888; font-size: 11px !important; text-transform: uppercase }
-}
-
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
-h2 {
-  font-family: 'Cinzel', serif;
-  margin-top: 0;
-}
-
-@font-face {
-  font-family: 'Omnes-webfont';
-  src: url('../fonts/omnes-webfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/omnes-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/omnes-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/omnes-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/omnes-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/omnes-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-.heroBox {
-  border: .5rem solid $hero-color;
-  color: $hero-color;
-  text-align: center;
-  padding: 3.75rem;
-  width: 530px;
-  margin: 0 auto;
-}
-.separator-container .separator.line-separator:before {
-  float: left;
-}
-.separator-container .separator.line-separator:after {
-  float: right;
-}
-.separator-container .separator.line-separator:before, .separator-container .separator.line-separator:after {
-  display: block;
-  width: 40%;
-  content: " ";
-  margin-top: 14px;
-  border: 1px solid #c5a47e;
-}
-.separator-container {
-  -webkit-transition: all 0.7s ease-out 0.5s;
-  -moz-transition: all 0.7s ease-out 0.5s;
-  -o-transition: all 0.7s ease-out 0.5s;
-  -ms-transition: all 0.7s ease-out 0.5s;
-  transition: all 0.7s ease-out 0.5s;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.42857143;
-  font-size: 140%;
-  text-align: center;
-  position: relative;
-  .separator {
-    color: #c5a47e;
-    margin: 0 auto 1em;
-    width: 11em;
-  }
-}
-
-article {
-  p {
-    font-family: Cinzel, serif;
-  }
-}
-
-.quotes:before {
-  content: "\201C";
-  left: 0;
-}
-.quotes:after {
-  content: "\201D";
-  right: 0;
-}
-.quotes:before, .quotes:after {
-  position: absolute;
-  font-size: 50px;
-  font-family: sans-serif;
-  color: #777;
-  line-height: 1;
-}
-
-h2.title {
-  max-width: 760px;
-  margin: .8em auto 0 auto;
-  text-align: center;
-  display: block;
-}
-
-a.btn-primary_styles {
-  border-radius: 0px;
-  font-family: $brand-font;
-  border-width: 2px;
-    padding: .75rem 1.125rem .625rem;
-  text-decoration: none;
-  color: #282829;
-  background-color: rgba(40,40,41,0);
-  border-color: #282829;
-  box-shadow: 0 0 0 rgba(40,40,41,0);
-  display: block;
-      width: 230px;
-  font-size: 14px;
-  margin: 0 auto;
-  cursor: pointer;
-  border-style: solid;
-  text-decoration: none;
-  text-align: center;
-  transition: border-color .15s cubic-bezier(.694,.0482,.335,1),background-color .15s cubic-bezier(.694,.0482,.335,1),color .15s cubic-bezier(.694,.0482,.335,1),box-shadow .15s cubic-bezier(.694,.0482,.335,1);
-  &:hover, &:focus {
-    border-color: #282829;
-    background-color: #282829;
-    text-decoration: none;
-    color: #fffef2 !important;
-  }
-  &:visited {
-    color: #282829;
-  }
-}
-
-
-h3 {
-  color: #444444;
-  font-family: 'Cinzel', serif, Fallback, sans-serif;
-  &.post-title {
-    text-align: center;
-  }
-}
-
-button.navbar-toggle {
-  span {
-    color: black;
-
-    display: block;
-    &:after {
-      content: "";
-      background: url('../../img/up_down.png');
-      background-position: 0px -20px;
-      margin-left: 5px;
-      display: inline-block;
-      zoom: 1;
-      width: 10px;
-      height: 15px;
-    }
-  }
-  &.collapsed {
-    span {
-      display: block;
-      &:after {
-        background-position: 0px 0px;
+        &.in {
+          display: block !important;
+          background: white;
+          width: 100%;
+          position: fixed;
+          left: 0;
+          top: 7em;
+          z-index: 1;
+        }
       }
+
     }
   }
-}
-.navbarLogo {
-  width: 70%;
-  margin: 0 auto;
-  position: relative;
-  & a {
-    display: block;                          // Display block so that we can set width, height and other attributes.
-    width: 100px;
-    margin: auto;                  // Set the required width (Should be half the graphic width to be retina ready)
-    height: 50px;                            // Set the required height (Should be half the graphic height to be retina ready)
-    text-indent: -9999px;                    // Push the text off screen so that it doesn't overlap/duplicate over the logo graphic
-    background-image: url(../img/logo2x.png);  // Set the logo graphich as the background image
-    background-size: cover;                  // Make sure that the logo graphic covers the dimensions of the site-title (Must for retina ready)
+
+
+  .navbar-toggle {
+    float: left;
+    display: block;
   }
-}
-nav {
-  .container-fluid {
-    .navbar-header {
-      margin: 0;
-    }
+
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+
   }
-}
-.navbar {
-  position: absolute;
-  top: 4em;
-  left: 0;
-  width: 100%;
-  background: white !important;
-  font-family: Cinzel, serif;
-  min-height: 0px;
-  margin-bottom: 0px;
-}
-.navbar-collapse {
-  box-shadow: none !important;
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border: none;
-}
-.navbar-header {
-  float: none;
-}
-.navbar-toggle {
-  float: left;
-  display: block;
-}
-.navbar-collapse {
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-}
-.navbar-nav {
-  margin: 7.5px -15px;
-}
-.navbar-toggle {
-  width: 145px;
-  border-radius: 1px;
-}
-
-#navbar.navbar-collapse.collapse.in {
-  display: block !important;
-}
-#navbar.navbar-collapse.collapse{ display: none !important; }
-.navbar-nav>li {
-  float: none;
-}
-.navbar-nav>li>a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-html,body,.container
-{
-  height:100%;
-}
 
 
-.container {
-  .col-md-8 {
-    p.opening-paragraph.livingroom {
-      display: none !important;
-    }
 
-    p.opening-paragraph {
+
+
+
+    .navbarLogo {
       margin: 0 auto;
-      padding: 0 0 3em 0;
-    }
-  }
-}
-
-.container {
-  display:table;
-  width: 100%;
-  padding-top: 50px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: none;
-
-    &.follower {
-      padding-top: 8rem;
-    }
-
-
-
-  &.noPad {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-  }
-  .col-md-8.portfolio div { margin-bottom: 1em; }
-  ul.product-holder, ul.press-holder {
-    list-style: none;
-    text-align: center;
-    margin-bottom: 3em;
-    padding-left: 0;
-    li{
-      h3 {
-        margin-bottom: 2em;
+      position: relative;
+      width: 260px;
+      text-align: center;
+      & a {
+        display: block;
+        width: 150px;
+        margin: auto;
+        height: 50px;
+        text-indent: -9999px;
+        background-image: url(../img/crispsmall.png);
+        background-position: center top;
+        background-repeat: no-repeat;                // Make sure that the logo graphic covers the dimensions of the site-title (Must for retina ready)
       }
     }
-  }
-}
-
-.secret {
-  display: none;
-}
-
-.row
-{
-  height: 100%;
-  max-width: 1280px;
-  display: block;
-  margin: 0 auto;
-}
-.col-md-3.no-float, .col-md-9.no-float {
-  float: none; /* thanks baxabbit */
-}
-.col-md-2
-{
-  display: table-cell;
-  // width: 25%;
-  top: 70px;
-}
-.col-md-9
-{
-  display: table-cell;
-  width: 75%;
-}
-
-.navbar-header.Products {
-  /*  display: none; */
-}
-
-footer {
-  clear: both;
-  padding: 4em 7.5% 0;
-
-  text-align: center;
-  p {
-    font-family: Cinzel, serif;
-
-  }
-}
-
-/* tricks */
-.navbar-fixed-top + .content-container {
-  margin-top: 70px;
-}
-.content-container {
-  margin: 0 130px;
-}
 
 
 
-#top-link-block.affix-top {
-  position: absolute; /* allows it to "slide" up into view */
-  bottom: -82px; /* negative of the offset - height of link element */
-}
-#top-link-block {
-  &:after{
-    content: "back to top";
-    background: url('../../img/up_down.png') no-repeat;
-    background-position: right -20px;
-    display: inline-block;
-    zoom: 1;
-    width: 100%;
-    z-index: 10;
-    height: 15px;
-  }
-}
-#top-link-block.affix {
-  cursor: pointer;
-  position: fixed; /* keeps it on the bottom once in view */
-  bottom: 0; /* distance from bottom */
-  width: 100%;
-  height: 5em;
-  transition: background-color 2s ease-in;
-  background-color: white;
-  float: left;
-}
+    /* for homepage */
+    article {
+      &.promo {
+        display: block;
 
-#scrollUp {
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #555;
-  color: #fff;
-}
-section#instagram {
-  max-height: 560px;
-  overflow: hidden;
-  div {
-    display: inline-block;
-  }
-  #instafeed, #townContainer {
-    a:nth-child(5n+5) {
-      /*	    border: 1px solid red;      */
-      margin-right: 0px;
+      }
     }
-  }
-}
-.gram {
-  margin-bottom: 10px;
-  margin-right: 15px;
-  float: left;
-  img{
-    width: 62px;
-    max-width: 100px;
-  }
-}
+    @media (max-width: 400px) {
+      iframe {
+        margin: 0 auto;
+        float: none;
+        width: 22em;
+        height: 12em;
 
-
-.btn-social-icon {
-  margin: 1px;
-}
-
-.contact-hero {
-  max-height: 499px; margin: 0 auto; margin-bottom: 53px;
-}
-
-.social-holder {
-  margin: 3.5em 1em 1em 0;
-  display: inline-block;
-  width: 100%;
-}
-
-@media (max-width: 1199px) {
-  iframe, article.col-md-6 {
-    margin: 0 auto;
-    display: block;
-    float: none;
-  }
-  .col-md-12.col-lg-6.promo {
-    margin-bottom: 5.5em;
-  }
-}
-
-img {
-  &.mobilisima {
-    max-width: 320px;
-    margin: 50px auto 0 auto;
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    #navbar {
-      padding-top: 35px;
+      }
     }
-    &.navbar-default {
+    @media (min-width: 401px) {
+      iframe {
+        margin: 0 auto;
+        float: none;
+        width: 33em;
+        height: 19em;
+
+      }
+    }
+    @media (min-width: 735px) {
+      iframe {
+        margin: 0 auto;
+        display: block;
+        float: none;
+        width: 40em;
+        height: 25em;
+
+      }
+    }
+
+
+    /* fix article div height for homepage */
+    .container.hero, .container.follower {
+      article {
+        height: initial;
+      }
+    }
+    /* for portfolio page */
+    article {
+      height: 350px;
+      p.videoCaption {
+        margin: 1em auto 1em auto;
+        font-size: 1.4em;
+        text-align: center;
+        max-width: 455px;
+      }
+      a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0 0 0 0;
+        &:hover {
+          color:#2e3138;
+          .overlay {
+            opacity:1;
+          }
+        }
+        .overlay {
+          background-color: rgba(0,0,0,0.4);
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: table;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+          text-align: center;
+          opacity: 0;
+          .header.hover-title {
+            background: none;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            position: relative;
+            h2 {
+              color: #fff;
+              padding: 0 0;
+              font-weight: normal !important;
+              /*              font-family: 'Omnes-webfont', Fallback, sans-serif !important; */
+              font-family: 'Cinzel', Fallback, sans-serif, Times;
+              margin-bottom: 0;
+              text-transform: uppercase;
+              line-height: 1;
+              font-size: 1.5em;
+              font-variant: normal;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+
+    }
+    .archive article.project a .overlay h2, .home article.project a .overlay h2 {
+      font-size: 1.48688em;
+      font-weight: normal !important;
+      margin-bottom: 0;
+      font-style: italic;
+      text-transform: none;
+      line-height: 1;
+      padding: 1em 0
+    }
+
+    /* regular hovering http://stackoverflow.com/questions/28941626/darken-image-on-hover */
+    .post_first {
+      cursor: pointer;
+      overflow: auto;
+      clear: both;
+      /*
+        height: 649px;
+        background: url(../images/old_field_1.jpg) no-repeat center center;
+        background-size: cover;
+        */
+      position: relative;
+    }
+    .post_first:before {
+      position: absolute;
       top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      background: rgba(0, 0, 0, .5);
+      -webkit-transition: opacity 0.25s ease-in-out;
+      transition: opacity 0.25s ease-in-out;
+      content: "";
+      z-index: 999;
     }
-    button {
-      &.navbar-toggle {
-        width: 55px;
-        span {
+    .post_first:hover:before {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    .col-sm-5 img.img-responsive:hover { background: rgba(0, 0, 0, 0.4); cursor: pointer; }
+    .smservices-popin-column {
+      ul li span.ccservices-countries, ul li a, .nav > li > a,
+      { color: #888888; font-size: 11px !important; text-transform: uppercase }
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Cinzel);
+    h2 {
+      font-family: 'Cinzel', serif;
+      margin-top: 0;
+    }
+
+    @font-face {
+      font-family: 'Omnes-webfont';
+      src: url('../fonts/omnes-webfont.eot'); /* IE9 Compat Modes */
+      src: url('../fonts/omnes-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/omnes-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/omnes-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+      url('../fonts/omnes-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/omnes-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    }
+
+    .heroBox {
+      border: .5rem solid $hero-color;
+      color: $hero-color;
+      text-align: center;
+      padding: 3.75rem;
+      width: 530px;
+      margin: 0 auto;
+    }
+    .separator-container .separator.line-separator:before {
+      float: left;
+    }
+    .separator-container .separator.line-separator:after {
+      float: right;
+    }
+    .separator-container .separator.line-separator:before, .separator-container .separator.line-separator:after {
+      display: block;
+      width: 40%;
+      content: " ";
+      margin-top: 14px;
+      border: 1px solid #c5a47e;
+    }
+    .separator-container {
+      -webkit-transition: all 0.7s ease-out 0.5s;
+      -moz-transition: all 0.7s ease-out 0.5s;
+      -o-transition: all 0.7s ease-out 0.5s;
+      -ms-transition: all 0.7s ease-out 0.5s;
+      transition: all 0.7s ease-out 0.5s;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.42857143;
+      font-size: 140%;
+      text-align: center;
+      position: relative;
+      .separator {
+        color: #c5a47e;
+        margin: 0 auto 1em;
+        width: 11em;
+      }
+    }
+
+    article {
+      p {
+        font-family: Cinzel, serif;
+      }
+    }
+
+    .quotes:before {
+      content: "\201C";
+      left: 0;
+    }
+    .quotes:after {
+      content: "\201D";
+      right: 0;
+    }
+    .quotes:before, .quotes:after {
+      position: absolute;
+      font-size: 50px;
+      font-family: sans-serif;
+      color: #777;
+      line-height: 1;
+    }
+
+    h2.title {
+      max-width: 760px;
+      margin: .8em auto 0 auto;
+      text-align: center;
+      display: block;
+    }
+
+    a.btn-primary_styles {
+      border-radius: 0px;
+      font-family: $brand-font;
+      border-width: 2px;
+      padding: .75rem 1.125rem .625rem;
+      text-decoration: none;
+      color: #282829;
+      background-color: rgba(40,40,41,0);
+      border-color: #282829;
+      box-shadow: 0 0 0 rgba(40,40,41,0);
+      display: block;
+      width: 230px;
+      font-size: 14px;
+      margin: 0 auto;
+      cursor: pointer;
+      border-style: solid;
+      text-decoration: none;
+      text-align: center;
+      transition: border-color .15s cubic-bezier(.694,.0482,.335,1),background-color .15s cubic-bezier(.694,.0482,.335,1),color .15s cubic-bezier(.694,.0482,.335,1),box-shadow .15s cubic-bezier(.694,.0482,.335,1);
+      &:hover, &:focus {
+        border-color: #282829;
+        background-color: #282829;
+        text-decoration: none;
+        color: #fffef2 !important;
+      }
+      &:visited {
+        color: #282829;
+      }
+    }
+
+
+    h3 {
+      color: #444444;
+      font-family: 'Cinzel', serif, Fallback, sans-serif;
+      &.post-title {
+        text-align: center;
+      }
+    }
+
+    li a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    html,body,.container
+    {
+      height:100%;
+    }
+
+
+
+    .container {
+      display:table;
+      width: 100%;
+      padding-top: 70px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      max-width: none;
+
+      .col-md-8 {
+        p.opening-paragraph.livingroom {
           display: none !important;
         }
-        &:after {
-          content: 'menu';
+
+        p.opening-paragraph {
+          margin: 0 auto;
+          padding: 0 0 3em 0;
+        }
+      }
+
+      &.follower {
+        padding-top: 8rem;
+      }
+
+
+
+      &.noPad {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      .col-md-8.portfolio div { margin-bottom: 1em; }
+      ul.product-holder, ul.press-holder {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 3em;
+        padding-left: 0;
+        li{
+          h3 {
+            margin-bottom: 2em;
+          }
         }
       }
     }
 
+    .secret {
+      display: none;
+    }
+
+    .row
+    {
+      height: 100%;
+      max-width: 1280px;
+      display: block;
+      margin: 0 auto;
+    }
+    .col-md-3.no-float, .col-md-9.no-float {
+      float: none; /* thanks baxabbit */
+    }
+    .col-md-2
+    {
+      display: table-cell;
+      // width: 25%;
+      top: 70px;
+    }
+    .col-md-9
+    {
+      display: table-cell;
+      width: 75%;
+    }
+
+    .navbar-header.Products {
+      /*  display: none; */
+    }
+
+    footer {
+      clear: both;
+      padding: 4em 7.5% 0;
+
+      text-align: center;
+      p {
+        font-family: Cinzel, serif;
+        font-size: 11px;
+
+      }
+    }
+
+    /* tricks */
+    .navbar-fixed-top + .content-container {
+      margin-top: 70px;
+    }
+    .content-container {
+      margin: 0 130px;
+    }
+
+
+
+    #top-link-block.affix-top {
+      position: absolute; /* allows it to "slide" up into view */
+      bottom: -82px; /* negative of the offset - height of link element */
+    }
+    #top-link-block {
+      &:after{
+        content: "back to top";
+        background: url('../../img/up_down.png') no-repeat;
+        background-position: right -20px;
+        display: inline-block;
+        zoom: 1;
+        width: 100%;
+        z-index: 10;
+        height: 15px;
+      }
+    }
+    #top-link-block.affix {
+      cursor: pointer;
+      position: fixed; /* keeps it on the bottom once in view */
+      bottom: 0; /* distance from bottom */
+      width: 100%;
+      height: 5em;
+      transition: background-color 2s ease-in;
+      background-color: white;
+      float: left;
+    }
+
+    #scrollUp {
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #555;
+      color: #fff;
+    }
+  section#townContainer {
+
+    float: left;
+
   }
 
+    section#instagram {
+      max-height: 560px;
+      overflow: hidden;
 
-  .heroBox {
+      div {
+        display: block;
+        float: left;
+      }
 
-    width: 100%;
-    border: none;
-    margin-top: 1em;
+    }
 
-    .h1, h1 {
-      font-size: 2.5rem;
+      #instafeed, #townContainer {
+        a:nth-child(5n+5) {
+             //border: 1px solid red;
+          margin-right: 0px;
+        }
+      }
+
+    .gram {
+      margin-bottom: 10px;
+      margin-right: 15px;
+      float: left;
+      img{
+        width: 62px;
+        max-width: 100px;
+      }
+    }
+
+
+    .btn-social-icon {
+      margin: 1px;
+    }
+
+    .contact-hero {
+      max-height: 499px; margin: 0 auto; margin-bottom: 53px; width: 375px;
+    }
+
+    .social-holder {
+      margin: 3.5em 1em 1em 0;
+      display: inline-block;
+      width: 100%;
+    }
+
+    @media (max-width: 1199px) {
+      iframe, article.col-md-6 {
+        margin: 0 auto;
+        display: block;
+        float: none;
+      }
+      .col-md-12.col-lg-6.promo {
+        margin-bottom: 5.5em;
+      }
+    }
+
+    img {
+      &.mobilisima {
+        max-width: 320px;
+        margin: 50px auto 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        #navbar {
+          padding-top: 35px;
+        }
+        &.navbar-default {
+          top: 0;
+        }
+        button {
+          &.navbar-toggle {
+            &:after {
+              content: 'menu';
+            }
+          }
+        }
+
+      }
+
+
+      .heroBox {
+
+        width: 100%;
+        border: none;
+        margin-top: 1em;
+
+        .h1, h1 {
+          font-size: 2.5rem;
+        }
+      }
+
     }
   }
-
-}
