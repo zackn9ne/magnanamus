@@ -512,13 +512,18 @@ header {
       display: none;
     }
 
-    .row
-    {
+    .row {
+      &.insta {
+        h1 {
+          text-align: center;
+        }
+      }
       height: 100%;
       max-width: 1280px;
       display: block;
       margin: 0 auto;
     }
+
     .col-md-3.no-float, .col-md-9.no-float {
       float: none; /* thanks baxabbit */
     }
