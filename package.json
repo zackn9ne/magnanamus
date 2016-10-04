@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "grunt uglify",
+    "postinstall": "grunt build",
     "start": "node server.js"
   },
   "dependencies": {
