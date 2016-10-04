@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "body-parser": "^1.10.2",
+    "bower": "^1.7.9",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
+    "grunt": "^1.0.1",
     "grunt-contrib-uglify": "2.0.0",
     "jade": "~1.11.0",
     "method-override": "^2.3.1",

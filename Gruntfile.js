@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 
     develop: {
       server: {
-        file: 'bin/www'
+        file: 'server.js'
       }
     },
 

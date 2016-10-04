@@ -9,6 +9,7 @@ body {
   margin-top: 6em;
   color: #888888;
   font-family: 'Cinzel', Fallback, sans-serif, Times;
+  /*CSS for basic styling and non-retina image path:*/
   /* for homepage */
   /* fix article div height for homepage */
   /* for portfolio page */
@@ -41,6 +42,18 @@ body {
     top: 0;
     width: 100%;
     z-index: 100; }
+    body header nav h2 {
+      text-align: center; }
+    body header nav .logo {
+      margin: 0 auto; }
+      body header nav .logo a {
+        display: block;
+        background-image: url(../../img/logo.png);
+        width: 240px;
+        height: 75px;
+        text-align: center;
+        margin: 0 auto;
+        text-indent: -999em; }
     body header nav button.navbar-toggle {
       font-size: 11px;
       z-index: 100;
@@ -54,97 +67,46 @@ body {
       display: block; }
       body header nav.collapsed span:after {
         background-position: 0px 0px; }
-  body nav {
-    /* make keyframes that tell the start state and the end state of our object */ }
-    body nav .container-fluid .navbar-header {
-      margin: 0; }
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    opacity: 1\9;
-    /* IE9 only */ }
-  to {
-    opacity: 1; } }
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-    opacity: 1\9;
-    /* IE9 only */ }
-  to {
-    opacity: 1; } }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    opacity: 1\9;
-    /* IE9 only */ }
-  to {
-    opacity: 1; } }
-    body nav .fade-in {
-      opacity: 0;
-      /* make things invisible upon start */
-      -webkit-animation: fadeIn ease-in 1;
-      /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-      -moz-animation: fadeIn ease-in 1;
-      animation: fadeIn ease-in 1;
-      -webkit-animation-fill-mode: forwards;
-      /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-      -moz-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-duration: 1s;
-      -moz-animation-duration: 1s;
-      animation-duration: 1s; }
-    body nav .fade-in.one {
-      -webkit-animation-delay: 0.7s;
-      -moz-animation-delay: 0.7s;
-      animation-delay: 0.7s; }
-    body nav #navbar {
-      /*  the hidden one  */
-      font-size: 11px;
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background: white !important;
-      font-family: Cinzel, serif;
-      -webkit-transition: opacity 1s ease-in;
-      transition: opacity 1s ease-in; }
-      body nav #navbar .nav.navbar-nav {
-        margin: 0 !important;
+  body nav .container-fluid .navbar-header {
+    margin: 0; }
+  body nav #navbar {
+    /*  the hidden one  */
+    font-size: 11px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: white !important;
+    font-family: Cinzel, serif;
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in; }
+    body nav #navbar .nav.navbar-nav {
+      margin: 0 !important;
+      width: 100%; }
+      body nav #navbar .nav.navbar-nav ul {
         width: 100%; }
-        body nav #navbar .nav.navbar-nav ul {
-          width: 100%; }
-        body nav #navbar .nav.navbar-nav li {
-          float: none;
-          margin-bottom: 19px; }
-      body nav #navbar.navbar-collapse.collapse {
-        display: none !important; }
-        body nav #navbar.navbar-collapse.collapse.in {
-          display: block !important;
-          background: white;
-          width: 100%;
-          position: fixed;
-          left: 0;
-          top: 7em;
-          z-index: 1; }
+      body nav #navbar .nav.navbar-nav li {
+        float: none;
+        margin-bottom: 19px; }
+    body nav #navbar.navbar-collapse.collapse {
+      display: none !important; }
+      body nav #navbar.navbar-collapse.collapse.in {
+        display: block !important;
+        background: white;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 7em;
+        z-index: 1; }
   body .navbar-toggle {
     float: left;
     display: block; }
   body .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-  body .navbarLogo {
-    margin: 0 auto;
-    position: relative;
-    width: 260px;
-    text-align: center; }
-    body .navbarLogo a {
-      display: block;
-      width: 150px;
-      margin: auto;
-      height: 50px;
-      text-indent: -9999px;
-      background-image: url(../img/crispsmall.png);
-      background-position: center top;
-      background-repeat: no-repeat; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    body div.logo {
+      background-image: url(../../img/logo@2x.png);
+      background-size: 200px 200px; } }
   body article.promo {
     display: block; }
   @media (max-width: 400px) {
