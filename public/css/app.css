@@ -348,6 +348,8 @@ body {
     max-width: 1280px;
     display: block;
     margin: 0 auto; }
+    body .row.insta h1 {
+      text-align: center; }
   body .col-md-3.no-float, body .col-md-9.no-float {
     float: none;
     /* thanks baxabbit */ }
