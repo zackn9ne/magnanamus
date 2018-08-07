@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title></title><link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"><link rel="stylesheet" href="/build/all_the.css"><script src="/build/bower_concat.min.js"></script></head><body><header><nav><button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"></button><div id="navbar" class="navbar-collapse collapse fade-in one"><ul class="nav navbar-nav"><li class="active"><a href="/">Home</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div><div class="logo"><a href="/">Magness Design</a></div><h2></h2></nav></header><script>$(function() {
+
+  function loadHeroBackstretchIt() {
+
+    if(window.devicePixelRatio >= 2) {
+      $(".portfolio.55fb2774ad53ee270a5997a3").backstretch("/img/livingroom_2x.jpg");
+
+    } else {
+      $(".portfolio.55fb2774ad53ee270a5997a3").backstretch("/img/livingroom.jpg");
+    }
+  }
+  loadHeroBackstretchIt();
+
+  // Only enable if the document has a long scroll bar
+  // Note the window height + offset
+  if ( ($(window).height() + 100) < $(document).height() ) {
+  $('#top-link-block').removeClass('hidden').affix({
+  // how far to scroll down before link "slides" into view
+  offset: {top:100}
+  });
+  }
+
+  $.scrollUp({
+      scrollName: 'scrollUp',      // Element ID
+      scrollDistance: 300,         // Distance from top/bottom before showing element (px)
+      scrollFrom: 'top',           // 'top' or 'bottom'
+      scrollSpeed: 300,            // Speed back to top (ms)
+      easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+      animation: 'fade',           // Fade, slide, none
+      animationSpeed: 200,         // Animation speed (ms)
+      scrollTrigger: false,        // Set a custom triggering element. Can be an HTML string or jQuery object
+      scrollTarget: false,         // Set a custom target element for scrolling to. Can be element or number
+      scrollText: 'Scroll to top', // Text for element, can contain HTML
+      scrollTitle: false,          // Set a custom <a> title if required.
+      scrollImg: false,            // Set true to use image
+      activeOverlay: false,        // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+      zIndex: 2147483647           // Z-Index for the overlay
+  });
+
+  // instantiate vanilla-lazyload
+  var myLazyLoad = new LazyLoad();
+
+
+}) //Begin document
+</script><div style="height: 300px;" class="portfolio 55fb2774ad53ee270a5997a3"></div><div class="container"><h2 style="text-align: center;">Downtown Loft</h2><div style="float: none; margin: 0 auto; text-align: center;" class="col-md-8 portfolio"><p class="opening-paragraph livingroom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><div class="col-sm-6"><img data-original="../../img/living-room-for-clips-a.jpg" style="width: 100%;" class="lazy"></div><div class="col-sm-6"><img data-original="../../img/dining-room-3.jpg" style="width: 100%;" class="lazy"></div><div class="col-md-12"><img data-original="../../img/dining-room-2.jpg" style="width: 100%;" class="lazy"></div><div class="col-sm-6"><img data-original="../../img/living-room-11.jpg" style="width: 100%;" class="lazy"></div><div class="col-sm-6"><img data-original="../../img/living-room-13.jpg" style="width: 100%;" class="lazy"></div><div class="col-sm-6"><img data-original="../../img/study-1.jpg" style="width: 100%;" class="lazy"></div><div class="col-sm-6"><img data-original="../../img/study.jpg" style="width: 100%;" class="lazy"></div><div class="secret"><p>Images: { path: '../../img/living-room-for-clips-a.jpg',
+  span: 'col-sm-6' },{ path: '../../img/dining-room-3.jpg', span: 'col-sm-6' },{ path: '../../img/dining-room-2.jpg', span: 'col-md-12' },{ path: '../../img/living-room-11.jpg', span: 'col-sm-6' },{ path: '../../img/living-room-13.jpg', span: 'col-sm-6' },{ path: '../../img/study-1.jpg', span: 'col-sm-6' },{ path: '../../img/study.jpg', span: 'col-sm-6' }</p><p>Thumbnail: livingroom</p><p>DOB: 1955-03-08</p><p>article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Badge: 400</p></div></div></div><a id="scrollUp" href="#top" title="Scroll to top" style="position: fixed; z-index: 2147483647; display: none;">Scroll to top</a><footer><footer class="container col-12-sm"><p>©2016 Magness Design. All Rights Reserved</p></footer></footer><!-- build:js(.) scripts/vendor.js--><!-- bower:js--><!--script(src='../components/modernizr/modernizr.js')--><!-- endbower--><!-- endbuild--><!-- build:js(.) scripts/plugins.js-->
+<!-- endbuild--><!-- build:js scripts/main.js--><!--script(src='scripts/main.js')--><!-- endbuild--><!-- Google Analytics: change UA-XXXXX-X to be your site's ID.--><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');</script></body></html>

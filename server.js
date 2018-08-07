@@ -21,7 +21,7 @@ var db = require('./model/db'),
 var routes = require('./routes/index'),
     blobs = require('./routes/blobs'),
     press = require('./routes/press'),
-    portfolio = require('./routes/portfolio'),
+    portfolio = require('./routes/test_portfolio'),
     product = require('./routes/product');
 
 //var users = require('./routes/users');

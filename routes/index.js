@@ -5,16 +5,18 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   res.render('index', { title: 'Magness Design' });
+//  res.json({ message: 'hooray! welcome to our api!' });   
+
   // res.sendFile('../index.html', { title: 'Magness Design' });
 
 });
 
 router.get('/about', function(req, res) {
-  res.render('basic_about', { title: 'About' });
+  res.render('static_about', { title: 'About' });
 });
 
 router.get('/contact', function(req, res) {
-  res.render('basic_contact', { title: 'Contact' });
+  res.render('static_contact', { title: 'Contact' });
  
 });
 

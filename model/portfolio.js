@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');  
 var portfolioSchema = new mongoose.Schema({  
+  url: String,
   name: String,
   badge: Number,
   thumbnail : String,

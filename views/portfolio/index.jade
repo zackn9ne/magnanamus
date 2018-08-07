@@ -30,7 +30,7 @@ block content
 
             })
           article.portfolio(class=(i===4 ? '#{portfolio._id} noclick'  : '#{portfolio._id}'))
-            a(href='/portfolio/#{portfolio._id}') #{portfolio.title}
+            a(href='/portfolio/#{portfolio.url}') #{portfolio.title}
                   .overlay
                       .header.hover-title
                         h2.post-title #{portfolio.name}

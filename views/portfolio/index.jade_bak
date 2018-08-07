@@ -1,0 +1,40 @@
+extends ../layout
+
+block header
+  include ../templates/header.jade
+
+
+
+block content
+  .container.noPad
+      - each portfolio, i in portfolios
+          script.
+            $(document).ready(function() {
+              function loadHeroBackstretchIt() {
+
+                  if(window.devicePixelRatio >= 2) {
+              $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}_2x.jpg");
+              $("img");
+
+                  }
+                  else {
+              $(".portfolio.#{portfolio._id}").backstretch("/img/#{portfolio.thumbnail}.jpg");
+
+                  }
+
+
+
+
+              }
+              loadHeroBackstretchIt();
+
+            })
+          article.portfolio(class=(i===4 ? '#{portfolio._id} noclick'  : '#{portfolio._id}'))
+            a(href='/portfolio/#{portfolio.id}') #{portfolio.title}
+                  .overlay
+                      .header.hover-title
+                        h2.post-title #{portfolio.name}
+
+
+block footer
+  include ../templates/footer.jade

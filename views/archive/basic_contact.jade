@@ -1,0 +1,33 @@
+extends layout
+
+block header
+        include templates/header.jade
+block content
+  .container(style="max-width: 810px;")
+    .row
+      .col-md-6(style="margin: 4em auto; width: 375px;padding-right: 0px; padding-left: 0px;")
+        .row.insta
+          section#instagram
+            #instafeed
+          h1 townhouse
+          section#townContainer
+      .col-md-6(style="text-align: center; color: gray; margin: 4em auto;width: 405px;")
+        img.img-responsive(src='../img/IMG_1715.jpg' class="contact-hero")
+        p 30 East 33rd Street
+        p 10th Floor
+        p New York, NY 10016
+        p
+          a(href="mailto:sarah@interiorbymd.com") sarah@interiorbymd.com
+        p 917-239-5136
+        p www.magnessdesign.com
+        .row(class="social-holder")
+          a.btn.btn-social-icon.btn-instagram(href="http://instagram.com/magnessdesign" target="_blank")
+            i.fa.fa-instagram
+
+
+          a.btn.btn-social-icon.btn-instagram(href="http://facebook.com/magnessdesign" target="_blank")
+            i.fa.fa-facebook
+
+
+          a.btn.btn-social-icon.btn-instagram(href="http://twitter.com/magnessdesign" target="_blank")
+            i.fa.fa-twitter
